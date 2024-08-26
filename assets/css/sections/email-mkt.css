@@ -1,0 +1,13 @@
+.email-mkt-group {
+    margin: 10rem 0;
+
+    & > .wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5rem;
+    }
+
+    & > .wrapper > .card:nth-child(2) {
+        flex-direction: row-reverse;
+    }
+}

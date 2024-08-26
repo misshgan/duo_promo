@@ -1,0 +1,21 @@
+.button {
+    padding: clamp(1rem, 0.87rem + 0.217vw, 1.2rem) clamp(2rem, 1.609rem + 0.652vw, 2.6rem);
+    border: 1px solid var(--font-color-1);
+    border-radius: var(--border-radius-md);
+    display: block;
+    width: max-content;
+
+    font-size: clamp(1.8rem, 1.539rem + 0.435vw, 2.2rem);
+    font-weight: 500;
+
+    &--black {
+        color: var(--color-white);
+        background-color: var(--color-black);
+    }
+
+    &--red {
+        color: var(--color-white);
+        background-color: var(--color-red);
+        border-color: var(--color-red);
+    }
+}

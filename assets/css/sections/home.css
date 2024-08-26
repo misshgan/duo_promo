@@ -1,0 +1,49 @@
+/* ******************************** Cards group */
+
+.home-cards-group {
+  margin-top: clamp(10rem, 6.739rem + 5.435vw, 15rem);
+
+  .wrapper {
+    gap: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .wrapper > div {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+  }
+
+  .wrapper > div > .card {
+    flex-direction: column-reverse;
+    row-gap: 4rem;
+    justify-content: flex-start;
+    padding: 4rem 3rem;
+  }
+
+  .wrapper > div > .card > .card__image {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .wrapper > div > .card .card__features-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+  }
+
+  /* .wrapper .card:not(:first-child) {
+        max-width: 35%;
+        flex-direction: column-reverse;
+        row-gap: 4rem;
+    } */
+}
+
+.home-cards-group + .quote {
+  margin: clamp(10rem, 8.696rem + 2.174vw, 12rem) auto clamp(10rem, 6.739rem + 5.435vw, 15rem);
+}
+
+.card.card--alone + .table {
+    margin: 7.5rem 0 clamp(4rem, 1.717rem + 3.804vw, 7.5rem);
+}

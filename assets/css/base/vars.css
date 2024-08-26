@@ -1,0 +1,23 @@
+:root {
+    --color-white: #FCFCFC;
+    --color-light-grey: #ECECEC;
+    --color-grey: #858585;
+    --color-red: #D4262C;
+    --color-blue: #0573FA;
+    --color-black: #080E26;
+
+    --color-accent-1: var(--color-red);
+    --color-accent-2: var(--color-blue);
+
+    --font-color-1: var(--color-black);
+    --font-color-2: var(--color-white);
+    --font-color-3: var(--color-grey);
+
+    --font-size-base: 62.5%;
+    --font-default: 'Arimo', sans-serif;
+
+    --content-width: 1320px;
+
+    --border-radius-md: 2.5rem;
+    --border-radius-sm: 1rem;
+}

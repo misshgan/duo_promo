@@ -1,0 +1,63 @@
+.cta {
+    padding: clamp(4rem, 1.717rem + 3.804vw, 7.5rem) 0;
+    border-radius: var(--border-radius-md);
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+
+    .wrapper {
+        max-width: 95rem;
+    }
+
+  &__title {
+    font-size: clamp(3.6rem, 3.078rem + 0.87vw, 4.4rem);
+    font-weight: 700;
+
+    position: relative;
+  }
+  &:not(.cta--no-label) &__title::after {
+    content: 'Experimente gratuitamente!';
+
+    color: var(--color-white);
+    font-size: clamp(1.2rem, 0.939rem + 0.435vw, 1.6rem);
+    font-weight: 700;
+    width: max-content;
+    height: max-content;
+
+    padding: clamp(0.8rem, 0.604rem + 0.326vw, 1.1rem);
+    border-radius: var(--border-radius-md);
+    background-color: var(--color-accent-2);
+
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    transform: translateX(50%);
+    rotate: 10deg;
+  }
+  &__subtitle {
+    margin-top: 1.6rem;
+
+    font-size: clamp(1.8rem, 1.67rem + 0.217vw, 2rem);
+    font-weight: 500;
+  }
+  &__button {
+    margin-top: clamp(2.6rem, 2.339rem + 0.435vw, 3rem);
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: clamp(1.8rem, 1.67rem + 0.217vw, 2rem);
+    font-weight: 600;
+
+    padding: clamp(1rem, 0.478rem + 0.87vw, 1.8rem) clamp(2rem, 0.957rem + 1.739vw, 3.6rem);
+    border-radius: 1000px;
+  }
+  
+.button {
+}
+.button--red {
+}
+}
+

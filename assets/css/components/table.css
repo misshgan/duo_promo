@@ -1,0 +1,112 @@
+.main--home .quote + .table {
+    margin-top: clamp(10rem, 6.739rem + 5.435vw, 15rem);
+}
+
+.table {
+
+  &__title {
+    color: #FCFCFC;
+    font-size: clamp(3.8rem, 3.409rem + 0.652vw, 4.4rem);
+    font-weight: 700;
+
+    max-width: 95rem;
+  }
+  .table-body {
+    margin-top: 4rem;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background: linear-gradient(90deg, rgba(236, 236, 236, 0.00) 0%, rgba(236, 236, 236, 0.40) 11.65%, rgba(236, 236, 236, 0.40) 88.35%, rgba(236, 236, 236, 0.00) 100%);    
+    }
+
+    &::after {
+        top: 100%;
+    }
+
+    &::before {
+        bottom: 100%;
+    }
+  }
+  .table-card {
+    padding: 3rem;
+    border-right: 1px solid rgba(236, 236, 236, 0.40);
+    color: var(--font-color-2);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__icon {
+        margin-bottom: clamp(3.6rem, 2.035rem + 2.609vw, 6rem);
+        height: clamp(2.8rem, 2.278rem + 0.87vw, 3.6rem);
+        width: auto;
+    }
+    &__number {
+        color: var(--font-color-3);
+        font-size: clamp(1.8rem, 1.67rem + 0.217vw, 2rem);
+        font-weight: 400;
+    }
+    &__title {
+        margin-top: 1.6rem;
+
+        font-size: clamp(2rem, 1.87rem + 0.217vw, 2.2rem);
+        font-weight: 700;
+    }
+    &__description {
+        margin-top: clamp(0.6rem, 0.339rem + 0.435vw, 1rem);
+
+        font-size: clamp(1.8rem, 1.67rem + 0.217vw, 2rem);
+        font-weight: 400;
+    }
+  }
+
+  .table-card:nth-child(4) {
+    border: none;
+  }
+
+  .table-card:nth-child(9n) {
+    border: none;
+  }
+
+  .table-horizontal-border {
+    grid-column: span 4;
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(236, 236, 236, 0.00) 0%, rgba(236, 236, 236, 0.40) 11.65%, rgba(236, 236, 236, 0.40) 88.35%, rgba(236, 236, 236, 0.00) 100%);
+  }
+}
+
+.table.table--big {
+  .table-card__icon {
+    margin-bottom: 4rem;
+  }
+  .table-card__title {
+      margin-top: 0;
+  }
+}
+
+.table.table--no-icons {
+  .table-card__number {
+    font-size: clamp(1.8rem, 1.017rem + 2.087vw, 3rem);
+  }
+  .table-card__title {
+    margin-top: clamp(1.6rem, 0.035rem + 4.174vw, 4rem);
+  }
+}
+
+.table.table--big-number {
+  .table-card__number {
+    font-size: clamp(5rem, 3.696rem + 2.174vw, 7rem);
+    color: var(--font-color-2);
+  }
+  .table-card__description {
+    margin-top: clamp(1rem, 0.348rem + 1.087vw, 2rem);
+  }
+}

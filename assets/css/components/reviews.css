@@ -1,0 +1,75 @@
+.reviews {
+  padding: clamp(4rem, 3.348rem + 1.087vw, 5rem) clamp(1.4rem, -0.948rem + 3.913vw, 5rem);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--color-white);
+
+  &__title {
+    max-width: 90rem;
+
+    font-size: clamp(2.8rem, 2.017rem + 1.304vw, 4rem);
+    font-weight: 700;
+  }
+  &__subtitle {
+    max-width: 90rem;
+    margin-top: clamp(1.2rem, 0.678rem + 0.87vw, 2rem);
+
+    font-size: clamp(1.8rem, 1.67rem + 0.217vw, 2rem);
+    font-weight: 400;
+  }
+  &__filter {
+    margin-top: clamp(1.8rem, 1.017rem + 1.304vw, 3rem);
+  }
+
+  &__cards {
+    margin-top: clamp(1.8rem, 1.017rem + 1.304vw, 3rem);
+    display: none;
+  }
+}
+
+.reviews[data-active-group-number='1'] .js-review-cards[data-group-number='1'],
+.reviews[data-active-group-number='2'] .js-review-cards[data-group-number='2'],
+.reviews[data-active-group-number='3'] .js-review-cards[data-group-number='3'],
+.reviews[data-active-group-number='4'] .js-review-cards[data-group-number='4'],
+.reviews[data-active-group-number='5'] .js-review-cards[data-group-number='5'] {
+  display: flex;
+  animation: getInUp 0.2s ease-in;
+}
+
+.review-filter {
+  display: flex;
+  align-items: center;
+  border-radius: 999px;
+  background: rgba(141, 192, 255, 0.15);
+  max-width: max-content;
+  padding: clamp(0.8rem, 0.67rem + 0.217vw, 1rem);
+  column-gap: 0.6rem;
+
+  &__item button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: inherit;
+    padding: clamp(0.8rem, 0.539rem + 0.435vw, 1.2rem) clamp(1.4rem, 0.748rem + 1.087vw, 2.4rem);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all .2s;
+
+    font-size: clamp(1.4rem, 1.139rem + 0.435vw, 1.8rem);
+    font-weight: 500;
+  }
+
+  &__item.active button {
+    color: var(--color-white);
+    background-color: var(--color-accent-2);
+  }
+}
+
+@keyframes getInUp {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

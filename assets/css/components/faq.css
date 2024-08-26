@@ -1,0 +1,77 @@
+.faq {
+    margin-top: 10rem;
+
+  .wrapper {
+    color: var(--font-color-2);
+    display: flex;
+    column-gap: 4rem;
+  }
+  &__title {
+    font-size: clamp(3.8rem, 2.626rem + 1.957vw, 5.6rem);
+    font-weight: 700;
+  }
+  &__list {
+  }
+}
+.faq-list {
+    max-width: 98.5rem;
+    margin-left: auto;
+
+  &__item {
+    padding: clamp(1.6rem, 1.209rem + 0.652vw, 2.2rem) 0;
+    position: relative;
+  }
+  &__item:first-child::before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 1px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(236, 236, 236, 0.00) 0%, rgba(236, 236, 236, 0.40) 11.65%, rgba(236, 236, 236, 0.40) 88.35%, rgba(236, 236, 236, 0.00) 100%);
+  }
+  &__item::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(236, 236, 236, 0.00) 0%, rgba(236, 236, 236, 0.40) 11.65%, rgba(236, 236, 236, 0.40) 88.35%, rgba(236, 236, 236, 0.00) 100%);
+  }
+  &__item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 2rem;
+    cursor: pointer;
+
+    font-size: clamp(1.8rem, 1.539rem + 0.435vw, 2.2rem);
+    font-weight: 500;
+  }
+  &__item-body {
+    font-size: clamp(1.6rem, 1.47rem + 0.217vw, 1.8rem);
+    font-weight: 400;
+    max-height: 0;
+    overflow: hidden;
+    padding-top: 0;
+    transition: all .3s;
+  }
+
+  &__item-header.active + &__item-body {
+    padding-top: clamp(1rem, 0.087rem + 1.522vw, 2.4rem);
+    max-height: 50rem;
+  }
+    
+  &__item-header svg {
+    transition: all .3s;
+  }
+
+  &__item-header.active svg {
+    transform: rotate(180deg);
+  }
+}
+
+.faq.faq--pricing {
+  margin-top: 0;
+}

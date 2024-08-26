@@ -1,0 +1,5 @@
+.pricing-cards {
+    display: flex;
+    column-gap: 2vw;
+    margin-top: clamp(5rem, 3.696rem + 2.174vw, 7rem);
+}

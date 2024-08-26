@@ -1,0 +1,11 @@
+.quote {
+    max-width: 1085px;
+    margin: 0 auto;
+
+    h2 {
+        color: var(--color-white);
+        text-align: center;
+        font-size: clamp(3rem, 2.087rem + 1.522vw, 4.4rem);
+        font-weight: 700;
+    }
+}
