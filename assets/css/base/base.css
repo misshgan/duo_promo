@@ -39,7 +39,7 @@ p {
 
 .global-background.global-background--home {
     background-color: #060205;
-    background-image: url(/assets/images/home/main-background.png)
+    background-image: url(assets/images/home/main-background.png)
 }
 
 @media (print), (prefers-reduced-motion: reduce) {
