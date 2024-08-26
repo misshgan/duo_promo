@@ -7,15 +7,44 @@
 
     font-size: clamp(1.8rem, 1.539rem + 0.435vw, 2.2rem);
     font-weight: 500;
+    
+    transition: all .3s;
+
+    &:hover {
+        color: var(--color-white);
+        background-color: var(--color-black);
+    }
+
+    &:hover svg path {
+        stroke: var(--color-white);
+    }
 
     &--black {
         color: var(--color-white);
         background-color: var(--color-black);
     }
 
+    &--black:hover {
+        color: var(--color-black);
+        background-color: var(--color-white);
+    }
+
     &--red {
         color: var(--color-white);
         background-color: var(--color-red);
         border-color: var(--color-red);
+    }
+
+    &--red:hover {
+        color: var(--color-accent-1);
+        background-color: transparent;
+    }
+
+    &--red:hover svg path {
+        stroke: var(--color-accent-1);
+    }
+
+    svg path {
+        transition: all .3s;
     }
 }

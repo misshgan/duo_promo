@@ -36,6 +36,11 @@
         color: var(--font-color-2);
         font-size: clamp(1.4rem, 1.139rem + 0.435vw, 1.8rem);
         font-weight: 500;
+        transition: all .3s;
+    }
+
+    a:hover {
+      color: var(--color-accent-1);
     }
   }
 }

@@ -8,5 +8,10 @@
     &__nav li a {
         font-size: 2rem;
         font-weight: 500;
+        transition: all .3s;
+    }
+
+    &__nav li a:hover {
+        color: var(--color-accent-1);
     }
 }
