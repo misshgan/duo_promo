@@ -39,7 +39,23 @@ p {
 
 .global-background.global-background--home {
     background-color: #060205;
-    background-image: url(assets/images/home/main-background.png)
+    background-image: url('/assets/images/home/main-background.png')
+}
+
+.cards-group {
+    margin: 10rem 0;
+
+    & > .wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5rem;
+    }
+
+    @media (min-width:1025px) {
+        & > .wrapper > .card:nth-child(2) {
+            flex-direction: row-reverse;
+        }
+    }
 }
 
 @media (print), (prefers-reduced-motion: reduce) {

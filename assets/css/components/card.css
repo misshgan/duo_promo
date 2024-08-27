@@ -1,13 +1,22 @@
 .card {
   background-color: var(--color-white);
   border-radius: var(--border-radius-sm);
-  padding: 8rem 6rem;
+  padding: clamp(4rem, 1.391rem + 4.348vw, 8rem) clamp(1.4rem, -1.6rem + 5vw, 6rem);
   column-gap: 5rem;
+
+  @media (max-width:1024px) {
+    flex-direction: column-reverse;
+    row-gap: 3rem;
+  }
 
   &__image {
     width: 100%;
     max-width: 50%;
     height: auto;
+
+    @media (max-width:1024px) {
+      max-width: 100%;
+    }
   }
   &__text {
     display: flex;
@@ -100,10 +109,20 @@
     align-items: center;
     justify-content: space-between;
     column-gap: 4rem;
+
+    @media (max-width:1024px) {
+      flex-direction: column;
+      row-gap: 3rem;
+      padding: 0;
+    }
   }
 
   .wrapper > .card__text {
     width: 60%;
+
+    @media (max-width:1024px) {
+      width: 100%;
+    }
   }
 
   .card__title {
@@ -262,11 +281,22 @@
   align-items: center;
   column-gap: 4rem;
 
+  @media (max-width:1024px) {
+    flex-direction: column-reverse;
+    row-gap: 3rem;
+  }
+
   &__image {
     border-radius: var(--border-radius-sm);
     max-width: 50%;
+    width: 100%;
+
+    @media (max-width:1024px) {
+      max-width: 75rem;
+    }
   }
   &__content {
+    padding: clamp(1.8rem,1.017rem + 1.304vw,3rem) 0;
     display: flex;
     flex-direction: column;
   }
@@ -305,11 +335,20 @@
 
   .wrapper {
       column-gap: 4rem;
+
+      @media (max-width:1024px) {
+        flex-direction: column;
+        row-gap: 4rem;
+      }
   }
 
   &__list {
     row-gap: clamp(3.8rem, 3.278rem + 0.87vw, 4.6rem);
     width: 44%;
+
+    @media (max-width:1024px) {
+      width: 90%;
+    }
   }
   &__list li {
     position: relative;
@@ -340,7 +379,8 @@
     font-size:clamp(1.8rem, 1.67rem + 0.217vw, 2rem);
     font-weight: 400;
   }
-  &__image {
+  &__image img {
+    width: 100%;
   }
 }
 
@@ -348,6 +388,7 @@
   padding: clamp(4rem, 3.348rem + 1.087vw, 5rem) clamp(1.4rem, -0.948rem + 3.913vw, 5rem);
   background-color: var(--color-white);
   border-radius: var(--border-radius-sm);
+  margin-bottom: 0;
   
   & > .wrapper {
     color: var(--font-color-1);

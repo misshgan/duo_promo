@@ -13,6 +13,10 @@
     display: flex;
     gap: 4rem;
     align-items: flex-start;
+
+    @media (max-width:1024px) {
+      flex-direction: column;
+    }
   }
 
   .wrapper > div > .card {

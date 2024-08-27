@@ -1,0 +1,59 @@
+.mobile-nav {
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.75);
+
+  &.active {
+    display: block;
+    visibility: visible;
+  }
+
+  &__content {
+    color: var(--font-color-1);
+    background-color: var(--color-white);
+    border-radius: 0 0 var(--border-radius-sm) var(--border-radius-sm);
+    padding: 4rem 0;
+  }
+
+  &.active &__content {
+    animation: getInDown 0.4s ease-in-out;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+
+  ul li:not(:last-child, :first-child) {
+    margin-top: 3rem;
+  }
+
+  ul li:last-child {
+    margin-top: 1.2rem;
+  }
+
+  ul li a:not(.button) {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .button {
+  }
+  .button--red {
+  }
+}
+
+
+@keyframes getInDown {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}

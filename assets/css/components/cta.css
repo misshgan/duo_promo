@@ -10,6 +10,7 @@
 
     .wrapper {
         max-width: 95rem;
+        padding: 0 4vw;
     }
 
   &__title {
@@ -34,7 +35,7 @@
     position: absolute;
     bottom: 100%;
     right: 0;
-    transform: translateX(50%);
+    transform: translateY(20%);
     rotate: 10deg;
   }
   &__subtitle {

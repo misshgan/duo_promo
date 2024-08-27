@@ -36,6 +36,12 @@
         column-gap: 2.4rem;
     }
 
+    &__buttons .button:nth-child(2) {
+        @media (max-width:600px) {
+            display: none;
+        }
+    }
+
     &__image {
         width: 100%;
         height: auto;

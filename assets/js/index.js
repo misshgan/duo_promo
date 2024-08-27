@@ -23,7 +23,49 @@ function handleFaqItemsOpen() {
     })
 }
 
+function handleMobileNav() {
+    const openTarget = document.querySelector('.js-menu-open');
+    const closeTarget = document.querySelector('.js-menu-close');
+    const mobileMenu = document.querySelector('.js-mobile-nav');
+
+    if (!openTarget || !closeTarget || !mobileMenu) { 
+        console.error("Close target, open target or mobile menu container wasn't found"); 
+        return; 
+    }
+
+    const mobileMenuContent = mobileMenu.querySelector('.mobile-nav__content');
+
+    const catchClickAndClose = (e) => {
+        if (!mobileMenuContent.contains(e.target)) {
+            closeMenu();
+        }
+    };
+
+    openTarget.addEventListener('click', () => {
+        mobileMenu.classList.add('active');
+        openTarget.classList.add('hidden');
+        closeTarget.classList.remove('hidden');
+        document.body.classList.add('no-scroll');
+
+        setTimeout(() => {
+            document.addEventListener('click', catchClickAndClose);
+        }, 100);
+    });
+
+    closeTarget.addEventListener('click', closeMenu);
+
+    function closeMenu() {
+        mobileMenu.classList.remove('active');
+        openTarget.classList.remove('hidden');
+        closeTarget.classList.add('hidden');
+        document.body.classList.remove('no-scroll');
+        document.removeEventListener('click', catchClickAndClose);
+    }
+}
+
+
 window.addEventListener('DOMContentLoaded', () => {
     handleReviewsFilter();
     handleFaqItemsOpen();
+    handleMobileNav();
 })

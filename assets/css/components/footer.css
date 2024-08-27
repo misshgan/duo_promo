@@ -7,6 +7,10 @@
         padding-bottom: clamp(1.6rem, 1.339rem + 0.435vw, 2rem);
         color: var(--font-color-2);
         column-gap: 2rem;
+
+        @media (max-width:600px) {
+          justify-content: space-between;
+        }
     }
 
     .wrapper::before {
@@ -31,6 +35,10 @@
     display: flex;
     align-items: center;
     column-gap: clamp(2rem, 0.696rem + 2.174vw, 4rem);
+
+    @media (max-width:600px) {
+      display: none;
+    }
 
     a {
         color: var(--font-color-2);

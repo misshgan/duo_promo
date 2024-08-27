@@ -1,8 +1,31 @@
 .header {
-    margin-top: 2rem;
+    position: relative;
+
+    .wrapper {
+        position: relative;
+        z-index: 101;
+        padding-top: 2rem;
+        background-color: var(--color-white);
+    }
 
     &__nav ul {
         column-gap: 4rem;
+        
+        @media (max-width:1024px) {
+            display: none;
+        }
+    }
+
+    .mobile-menu-target {
+        @media (min-width:1025px) {
+            display: none;
+        }
+    }
+
+    & > .wrapper .button {
+        @media (max-width:1024px) {
+            display: none;
+        }
     }
 
     &__nav li a {
@@ -13,5 +36,21 @@
 
     &__nav li a:hover {
         color: var(--color-accent-1);
+    }
+
+    .js-menu-open {
+        @media (min-width:1025px) {
+            display: none;
+        }
+    }
+
+    .js-menu-close,
+    .js-menu-open {
+        cursor: pointer;
+    }
+
+    .js-menu-close.hidden,
+    .js-menu-open.hidden {
+        display: none;
     }
 }

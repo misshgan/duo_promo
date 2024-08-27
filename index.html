@@ -11,8 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
     <link rel="preload" href="assets/built/screen.min.css" as="style">
+    <link rel="preload" href="assets/built/index.min.js" as="script">
 
     <link rel="stylesheet" href="assets/built/screen.min.css">
+    <script src="assets/built/index.min.js"></script>
 
 </head>
 <body>
@@ -31,6 +33,30 @@
             </nav>
 
             <a href="#" class="button button--black">Get started free</a>
+
+            <svg class="js-menu-open" class="mobile-menu-target js-mobile-menu-target" xmlns="http://www.w3.org/2000/svg" width="31" height="18" viewBox="0 0 31 18" fill="none">
+                <path d="M1 1H30" stroke="black" stroke-linecap="round"/>
+                <path d="M1 9H30" stroke="black" stroke-linecap="round"/>
+                <path d="M1 17H30" stroke="black" stroke-linecap="round"/>
+            </svg>
+
+            <svg class="js-menu-close hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M1 19L18.5767 1.42335" stroke="black" stroke-linecap="round"/>
+                <path d="M1 1L18.5767 18.5767" stroke="black" stroke-linecap="round"/>
+            </svg>
+        </div>
+
+        <div class="mobile-nav js-mobile-nav">
+            <nav class="mobile-nav__content">
+                <ul class="flex items-center">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="email-mkt.html">Email MKT</a></li>
+                    <li><a href="sms.html">SMS MKT</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="/" class="button button--red">Get started free</a></li>
+                    <li><a href="#" class="button">Começar gratuitamente</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -53,7 +79,7 @@
                 </div>
             </section>
     
-            <section class="table">
+            <section class="table table--small">
                 <div class="wrapper">
                     <h2 class="table__title">Como é que o DUO funciona?</h2>
                     <ul class="table-body">
@@ -79,6 +105,9 @@
                             <h4 class="table-card__title">Segmentação de audiência</h4>
                             <p class="table-card__description">Divida seu público em segmentos para uma segmentação mais precisa</p>
                         </li>
+
+                        <li role="presentation" class="table-horizontal-border mobile"></li>
+
                         <li class="table-card">
                             <svg  class="table-card__icon" role="presentation" xmlns="http://www.w3.org/2000/svg" width="48" height="45" viewBox="0 0 48 45" fill="none">
                                 <path opacity="0.4" d="M47 10.1377V21.1029C47 23.8335 46.034 26.134 44.309 27.7251C42.607 29.3376 40.146 30.2406 37.225 30.2406V34.1322C37.225 35.5942 35.477 36.4757 34.189 35.6587L31.958 34.2827C32.165 33.6162 32.257 32.8852 32.257 32.1111V23.3605C32.257 18.9744 29.129 16.0503 24.437 16.0503H8.82C8.498 16.0503 8.19902 16.0719 7.90002 16.0934V10.1377C7.90002 4.65508 11.81 1 17.675 1H37.225C43.09 1 47 4.65508 47 10.1377Z" stroke="#FCFCFC" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -319,6 +348,9 @@
                             <h4 class="table-card__title">Segmentação de audiência</h4>
                             <p class="table-card__description">Divida seu público em segmentos para uma segmentação mais precisa</p>
                         </li>
+
+                        <li role="presentation" class="table-horizontal-border mobile"></li>
+
                         <li class="table-card">
                             <svg class="table-card__icon" role="presentation" xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
                                 <g clip-path="url(#clip0_120_202)">
@@ -346,7 +378,7 @@
                             <p class="table-card__description">Monitore os resultados e otimize suas campanhas com relatórios detalhados</p>
                         </li>
     
-                        <li class="table-horizontal-border"></li>
+                        <li role="presentation" class="table-horizontal-border"></li>
     
                         <li class="table-card">
                             <svg class="table-card__icon" role="presentation" xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
@@ -367,6 +399,9 @@
                             <h4 class="table-card__title">Segmentação de audiência</h4>
                             <p class="table-card__description">Divida seu público em segmentos para uma segmentação mais precisa</p>
                         </li>
+
+                        <li role="presentation" class="table-horizontal-border mobile"></li>
+
                         <li class="table-card">
                             <svg class="table-card__icon" role="presentation" xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
                                 <path d="M39.1667 15.6668V4.896C39.1667 4.11693 38.8651 3.36975 38.3283 2.81887C37.7916 2.26799 37.0637 1.9585 36.3046 1.9585H4.82056C4.06145 1.9585 3.33346 2.26799 2.79668 2.81887C2.25992 3.36975 1.95837 4.11693 1.95837 4.896V28.396C1.95837 29.175 2.25992 29.9223 2.79668 30.4732C3.33346 31.0241 4.06145 31.3335 4.82056 31.3335H15.5902" stroke="#FCFCFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

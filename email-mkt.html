@@ -33,6 +33,30 @@
             </nav>
 
             <a href="#" class="button button--black">Get started free</a>
+
+            <svg class="js-menu-open" class="mobile-menu-target js-mobile-menu-target" xmlns="http://www.w3.org/2000/svg" width="31" height="18" viewBox="0 0 31 18" fill="none">
+                <path d="M1 1H30" stroke="black" stroke-linecap="round"/>
+                <path d="M1 9H30" stroke="black" stroke-linecap="round"/>
+                <path d="M1 17H30" stroke="black" stroke-linecap="round"/>
+            </svg>
+
+            <svg class="js-menu-close hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M1 19L18.5767 1.42335" stroke="black" stroke-linecap="round"/>
+                <path d="M1 1L18.5767 18.5767" stroke="black" stroke-linecap="round"/>
+            </svg>
+        </div>
+
+        <div class="mobile-nav js-mobile-nav">
+            <nav class="mobile-nav__content">
+                <ul class="flex items-center">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="email-mkt.html">Email MKT</a></li>
+                    <li><a href="sms.html">SMS MKT</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="/" class="button button--red">Get started free</a></li>
+                    <li><a href="#" class="button">Começar gratuitamente</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -80,7 +104,7 @@
                 </div>
             </section>
 
-            <div class="email-mkt-group">
+            <div class="cards-group cards-group--email-mkt">
                 <div class="wrapper">
                     
                     <article class="card card--big-list-items flex items-center">
@@ -133,13 +157,15 @@
                     <article class="reviews js-reviews" data-active-group-number="1">
                         <h2 class="reviews__title">DUO: A Plataforma Incrivelmente Simples para Todos Utilizarem</h2>
                         <p class="reviews__subtitle">Negócios em crescimento ao redor do mundo - desde startups e pequenas empresas até empresas em expansão e corporações - confiam no DUO para economizar tempo em suas estratégias de marketing e garantir a satisfação dos clientes.</p>
-                        <ul class="reviews__filter review-filter">
-                            <li class="review-filter__item active"><button class="js-review-filter-item" data-item-number="1">Desenvolvedores</button></li>
-                            <li class="review-filter__item"><button class="js-review-filter-item" data-item-number="2">Designers</button></li>
-                            <li class="review-filter__item"><button class="js-review-filter-item" data-item-number="3">Profissionais de marketing</button></li>
-                            <li class="review-filter__item"><button class="js-review-filter-item" data-item-number="4">Proprietários de negócios</button></li>
-                            <li class="review-filter__item"><button class="js-review-filter-item" data-item-number="5">Startups</button></li>
-                        </ul>
+                        <div class="reviews__filter-container">
+                            <ul class="reviews__filter review-filter">
+                                <li class="review-filter__item active"><button class="js-review-filter-item" data-item-number="1">Desenvolvedores</button></li>
+                                <li class="review-filter__item"><button class="js-review-filter-item" data-item-number="2">Designers</button></li>
+                                <li class="review-filter__item"><button class="js-review-filter-item" data-item-number="3">Profissionais de marketing</button></li>
+                                <li class="review-filter__item"><button class="js-review-filter-item" data-item-number="4">Proprietários de negócios</button></li>
+                                <li class="review-filter__item"><button class="js-review-filter-item" data-item-number="5">Startups</button></li>
+                            </ul>
+                        </div>
                         <div class="reviews__cards js-review-cards" data-group-number="1">
                             <div class="reviews__card review-card">
                                 <img src="assets/images/email_mkt/reviews/author-1.png" alt="Review author photo" class="review-card__image">

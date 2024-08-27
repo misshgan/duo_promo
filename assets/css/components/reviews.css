@@ -16,8 +16,21 @@
     font-size: clamp(1.8rem, 1.67rem + 0.217vw, 2rem);
     font-weight: 400;
   }
-  &__filter {
+
+  &__filter-container {
     margin-top: clamp(1.8rem, 1.017rem + 1.304vw, 3rem);
+    width: 100%;
+    overflow: auto;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  &__filter-container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+  }
+
+  &__filter {
+    min-width: max-content;
   }
 
   &__cards {
