@@ -64,8 +64,8 @@
   }
 
   &__item-header.active + &__item-body {
-    padding-top: clamp(1rem, 0.087rem + 1.522vw, 2.4rem);
-    max-height: 50rem;
+    padding-top: 3rem;
+    max-height: 100rem;
   }
     
   &__item-header svg {
