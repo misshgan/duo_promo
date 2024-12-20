@@ -29,10 +29,14 @@
     color: var(--font-color-3);
     font-size: clamp(1.2rem, 0.939rem + 0.435vw, 1.6rem);
     font-weight: 400;
+    flex-shrink: 0;
   }
   &__links {
     margin-left: auto;
     display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    justify-content: flex-end;
     align-items: center;
     column-gap: clamp(2rem, 0.696rem + 2.174vw, 4rem);
 

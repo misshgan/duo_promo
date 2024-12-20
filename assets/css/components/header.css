@@ -6,6 +6,10 @@
         z-index: 101;
         padding-top: 2rem;
         background-color: var(--color-white);
+
+        @media (max-width:1024px) {
+            padding-bottom: 2rem;
+        }
     }
 
     &__nav ul {

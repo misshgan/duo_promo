@@ -383,6 +383,7 @@
   }
   &__image img {
     width: 100%;
+    max-width: 55rem;
   }
 }
 

@@ -2,16 +2,18 @@
   display: none;
   visibility: hidden;
   position: absolute;
-  top: 100%;
+  top: calc(100% - 1px);
   left: 0;
   width: 100%;
   height: 100vh;
   z-index: 100;
+  backdrop-filter: blur(10px);
   background-color: rgba(0, 0, 0, 0.75);
 
   &.active {
     display: block;
     visibility: visible;
+    animation: mobileNavAppear .2s ease-out;
   }
 
   &__content {
@@ -22,7 +24,7 @@
   }
 
   &.active &__content {
-    animation: getInDown 0.4s ease-in-out;
+    animation: getInDown 0.2s ease-out;
   }
 
   ul {
@@ -50,10 +52,20 @@
 
 @keyframes getInDown {
   from {
-    transform: translateY(-100%);
+    transform: translateY(-5rem);
   }
 
   to {
     transform: translateY(0);
+  }
+}
+
+@keyframes mobileNavAppear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
