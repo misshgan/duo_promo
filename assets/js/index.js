@@ -63,9 +63,31 @@ function handleMobileNav() {
     }
 }
 
+function handleSubmenu() {
+    const target = document.querySelector('.js-submenu');
+
+    if (!target) { return; }
+
+    target.addEventListener('click', (event) => {
+        event.stopPropagation();
+        target.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!target.classList.contains('active')) return;
+
+        const isClickInside = target.contains(event.target);
+        if (!isClickInside) {
+            target.classList.remove('active');
+        }
+    });
+}
+
+
 
 window.addEventListener('DOMContentLoaded', () => {
     handleReviewsFilter();
     handleFaqItemsOpen();
     handleMobileNav();
+    handleSubmenu();
 })
