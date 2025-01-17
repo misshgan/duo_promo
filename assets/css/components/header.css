@@ -33,6 +33,7 @@
 
         svg {
             transform: scale(0.75);
+            transition: all .2s;
         }
     }
 
@@ -70,6 +71,10 @@
         visibility: visible;
     }
 
+    &__nav .submenu.active svg {
+        transform: rotate(180deg) scale(.75);
+    }
+
     .mobile-menu-target {
         @media (min-width:1025px) {
             display: none;
@@ -89,8 +94,13 @@
         transition: all .3s;
     }
 
-    &__nav li a:hover {
+    &__nav li a:hover,
+    &__nav li p:hover {
         color: var(--color-accent-1);
+    }
+
+    &__nav li p:hover + svg path {
+        fill: var(--color-accent-1);
     }
 
     .js-menu-open {
