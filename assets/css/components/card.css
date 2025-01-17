@@ -258,14 +258,11 @@
 
   .card-plan__title {
     font-size: 2.6rem;
-    text-align: center;
-    width: 100%;
   }
 
   .card-plan__title::after {
     font-size: 1.2rem;
     padding: 0.8rem;
-    display: none;
   }
 
   .card-plan__price-group {
@@ -275,8 +272,6 @@
 
   .card-plan__price {
     font-size: 4rem;
-    text-align: center;
-    width: 100%;
   }
 
   .card-plan__price-description {
@@ -290,11 +285,30 @@
 
   .card-plan__benefits li {
     font-size: 1.8rem;
-    text-align: start;
   }
 
   .card-plan__button {
     font-size: 1.6rem;
+  }
+}
+
+.pricing-cards--sms .card-plan.card-plan--smaller {
+  .card-plan__title::after {
+    display: none;
+  }
+
+  .card-plan__title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .card-plan__price {
+    width: 100%;
+    text-align: center;
+  }
+
+  .card-plan__benefits li {
+    text-align: start;
   }
 }
 
