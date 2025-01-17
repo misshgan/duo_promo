@@ -61,10 +61,12 @@
     overflow: hidden;
     padding-top: 0;
     transition: all .3s;
+    opacity: 0;
   }
 
   &__item-header.active + &__item-body {
     padding-top: 3rem;
+    opacity: 1;
     max-height: 100rem;
   }
     
