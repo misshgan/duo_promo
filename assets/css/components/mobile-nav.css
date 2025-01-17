@@ -39,13 +39,59 @@
     margin-top: 1.2rem;
   }
 
-  ul li a:not(.button) {
+  .js-mobile-dropdown-target svg {
+    transition: all .3s;
+  }
+
+  .js-mobile-dropdown-target + ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+    overflow: hidden;
+
+    max-height: 0;
+    opacity: 0;
+    padding: 0;
+  }
+
+  .js-mobile-dropdown-target + ul li {
+    margin-top: 0;
+  }
+
+  .js-mobile-dropdown-target.active + ul {
+    animation: dropdownOpen .3s ease forwards;
+  }
+
+  .js-mobile-dropdown-target.active svg {
+    transform: rotate(180deg);
+  }
+
+  ul li a:not(.button),
+  ul li p {
     font-size: 2rem;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
   }
   .button {
   }
   .button--red {
+  }
+}
+
+@keyframes dropdownOpen {
+  from {
+    max-height: 0;
+    opacity: 0;
+    padding: 0;
+  }
+
+  to {
+    max-height: 100vh;
+    opacity: 1;
+    padding-top: 2rem;
   }
 }
 
