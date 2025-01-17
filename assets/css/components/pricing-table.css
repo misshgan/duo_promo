@@ -1,0 +1,72 @@
+.pricing-table-container {
+    margin-bottom: 10rem;
+
+    .wrapper {
+        overflow-x: auto;
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+}
+
+.pricing-table {
+    color: #fff;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #fff;
+    min-width: 768px;
+
+    * {
+        border-collapse: collapse;
+    }
+
+    tr {
+       
+    }
+
+    th:first-child,
+    td:first-child {
+        width: 35%;
+
+        @media (max-width:768px) {
+            width: 20%;;
+        }
+    }
+
+    tbody th {
+        text-align: start;
+    }
+
+    th, td {
+        border: 1px solid #fff;
+        padding: 2rem;
+        font-size: 1.8rem;
+        width: 15%;
+        line-height: normal;
+
+        @media (max-width:768px) {
+            font-size: 1.4rem;
+            padding: 1rem;
+        }
+    }
+
+    td {
+        border: none;
+        border-right: 1px solid #fff;
+        vertical-align: middle;
+    }
+
+    td:not(:first-child) {
+        text-align: center;
+    }
+
+    td:first-child {
+
+        p:first-child {
+            margin-bottom: 1.4rem;
+        }
+
+        b {
+            font-weight: 700;
+        }
+    }
+}
