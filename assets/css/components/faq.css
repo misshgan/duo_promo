@@ -1,5 +1,6 @@
 .faq {
     margin-top: 10rem;
+    -webkit-tap-highlight-color: transparent;
 
   .wrapper {
     color: var(--font-color-2);

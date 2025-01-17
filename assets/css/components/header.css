@@ -1,5 +1,6 @@
 .header {
     position: relative;
+    -webkit-tap-highlight-color: transparent;
 
     .wrapper {
         position: relative;
