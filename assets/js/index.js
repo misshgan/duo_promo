@@ -83,6 +83,16 @@ function handleSubmenu() {
     });
 }
 
+function handleMobileDropdown() {
+    const target = document.querySelector('.js-mobile-dropdown-target');
+
+    if (!target) { return; }
+
+    target.addEventListener('click', () => {
+        target.classList.toggle('active')
+    })
+}
+
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -90,4 +100,5 @@ window.addEventListener('DOMContentLoaded', () => {
     handleFaqItemsOpen();
     handleMobileNav();
     handleSubmenu();
+    handleMobileDropdown();
 })
